@@ -9,10 +9,10 @@ t8 = [111;001;111];
 t9 = [111;101;111];
 t10 = [111;111;111];
 img = imread('cat.jpg');
-img_gray = rgb2gray(img);
-img_size = size(img_gray);
-img_size_scaled = size(img_gray)*3;
-ht_img = zeros(img_size_scaled(1,1),img_size_scaled(1,2));
+img_gray = rgb2gray(img);%converted to grayscale
+img_size = size(img_gray);%size of original image
+img_size_scaled = size(img_gray)*3;%scaled for halftoning 
+ht_img = zeros(img_size_scaled(1,1),img_size_scaled(1,2));%initialize output image halftoned
 for x=1:img_size(1,2)%concatenating for each pixel in ht_img
     for y=1:img_size(1,1)
       if 0 > img_gray(y,x) > 22
