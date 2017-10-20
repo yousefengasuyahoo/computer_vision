@@ -13,7 +13,7 @@ img_gray = rgb2gray(img);
 img_size = size(img_gray);
 img_size_scaled = size(img_gray)*3;
 ht_img = zeros(img_size_scaled(1,1),img_size_scaled(1,2));
-for x=1:img_size(1,2)
+for x=1:img_size(1,2)%concatenating for each pixel in ht_img
     for y=1:img_size(1,1)
       if 0 > img_gray(y,x) > 22
           ht_img(y,x)=cat(1,:,t10);
@@ -38,4 +38,3 @@ for x=1:img_size(1,2)
       end
     end
 end
-%BW = mat2bw(ht_img);
