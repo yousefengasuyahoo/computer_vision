@@ -18,27 +18,27 @@ ht_img = zeros(img_size_scaled(1,1),img_size_scaled(1,2));%initialize output ima
 for x=1:img_size(1,2)%concatenating for each pixel in ht_img
     for y=1:img_size(1,1)
       if 0 > img_gray(y,x) > 22
-          ht_img(h,w)=stackMatrix(x:x+3,y:y+3,t10);
+          ht_img(h,w)=t10;
       elseif 22> img_gray(y,x) > 48
-          ht_img(h,w)=stackMatrix(x:x+3,y:y+3,t9);
+          ht_img(h,w)=t9;
       elseif 48> img_gray(y,x) > 74
-          ht_img(h,w)=stackMatrix(x:x+3,y:y+3,t8);
+          ht_img(h,w)=t8;
       elseif 74> img_gray(y,x) > 100
-          ht_img(h,w)=stackMatrix(x:x+3,y:y+3,t7);
+          ht_img(h,w)=t7;
       elseif 100> img_gray(y,x) > 126
-          ht_img(h,w)=stackMatrix(x:x+3,y:y+3,t6);
+          ht_img(h,w)=t6;
       elseif 126> img_gray(y,x) > 152
-          ht_img(h,w)=stackMatrix(x:x+3,y:y+3,t5);
+          ht_img(h,w)=t5;
       elseif 152> img_gray(y,x) > 178
-          ht_img(h,w)=stackMatrix(x:x+3,y:y+3,t4);
+          ht_img(h,w)=t4;
       elseif 178> img_gray(y,x) > 204
-          ht_img(h,w)=stackMatrix(x:x+3,y:y+3,t3);
+          ht_img(h,w)=t3;
       elseif 204> img_gray(y,x) > 230
-          ht_img(h,w)=stackMatrix(x:x+3,y:y+3,t2);
+          ht_img(h,w)=t2;
       elseif 230> img_gray(y,x) > 255
-          ht_img(h,w)=stackMatrix(x:x+3,y:y+3,t1);
-          h=h+3;
+          ht_img(h,w)= t1;
       end
-      w=w+3;
+      h=h+3;
     end
+    w=w+3;
 end
